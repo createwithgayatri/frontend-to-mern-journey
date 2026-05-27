@@ -1,0 +1,103 @@
+
+  :root{
+    --bg:#fafaf9; --fg:#0a0a0a; --muted:#6b7280; --card:#ffffff;
+    --border:#ececec; --accent:#0a0a0a; --accent-fg:#ffffff;
+  }
+  *{box-sizing:border-box}
+  body{
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+    background:var(--bg); color:var(--fg);
+    -webkit-font-smoothing:antialiased;
+  }
+  .eyebrow{
+    display:inline-block; font-size:11px; letter-spacing:.18em;
+    text-transform:uppercase; color:var(--muted);
+    background:#f1f1ef; border:1px solid var(--border);
+    padding:6px 12px; border-radius:999px;
+  }
+  h1.hero{font-weight:600; letter-spacing:-.02em; font-size:clamp(2rem,4vw,3rem)}
+  .lede{color:var(--muted); max-width:36rem; margin:0 auto}
+
+  /* Toggle */
+  .billing-toggle{
+    display:inline-flex; padding:4px; gap:4px;
+    background:#f1f1ef; border:1px solid var(--border); border-radius:999px;
+  }
+  .billing-toggle button{
+    border:0; background:transparent; padding:8px 18px; font-size:14px;
+    font-weight:500; color:var(--muted); border-radius:999px;
+    transition:all .25s ease; cursor:pointer;
+  }
+  .billing-toggle button.active{
+    background:#fff; color:var(--fg);
+    box-shadow:0 1px 2px rgba(0,0,0,.06);
+  }
+  .badge-pill{
+    background:var(--fg); color:var(--accent-fg);
+    font-size:10px; font-weight:600; letter-spacing:.08em;
+    padding:2px 7px; border-radius:999px; margin-left:6px;
+    text-transform:uppercase;
+  }
+
+  /* Cards */
+  .plan{
+    background:var(--card); border:1px solid var(--border);
+    border-radius:24px; padding:32px; height:100%;
+    display:flex; flex-direction:column;
+    opacity:0; transform:translateY(12px);
+    animation:rise .55s ease forwards;
+    transition:transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+  }
+  .plan:hover{ transform:translateY(-4px); border-color:#d4d4d4; box-shadow:0 12px 32px -16px rgba(0,0,0,.12)}
+  .plan.featured{
+    background:var(--fg); color:var(--accent-fg);
+    border-color:var(--fg);
+    box-shadow:0 24px 60px -20px rgba(0,0,0,.35);
+    position:relative;
+  }
+  @media (min-width: 768px){ .plan.featured{ transform:scale(1.03)} .plan.featured:hover{transform:scale(1.03) translateY(-4px)} }
+  .plan.featured .muted{ color:rgba(255,255,255,.65) }
+  .plan.featured .price-sub{ color:rgba(255,255,255,.55) }
+
+  .ribbon{
+    position:absolute; top:-12px; left:50%; transform:translateX(-50%);
+    background:#fff; color:var(--fg); font-size:10px; font-weight:600;
+    letter-spacing:.18em; text-transform:uppercase;
+    padding:5px 12px; border-radius:999px; box-shadow:0 2px 8px rgba(0,0,0,.15);
+  }
+  .plan h3{ font-size:18px; font-weight:600; margin:0 }
+  .muted{ color:var(--muted); font-size:14px }
+  .price{ font-size:48px; font-weight:600; letter-spacing:-.02em; line-height:1; }
+  .price-wrap{ display:flex; align-items:baseline; gap:6px; margin-top:24px}
+  .price-sub{ font-size:14px; color:var(--muted)}
+
+  .btn-plan{
+    height:44px; border-radius:999px; border:0; font-weight:500; font-size:14px;
+    margin-top:24px; transition:transform .2s ease, background .2s ease;
+    background:var(--fg); color:var(--accent-fg);
+  }
+  .btn-plan:hover{ transform:translateY(-1px); background:#222}
+  .plan.featured .btn-plan{ background:#fff; color:var(--fg)}
+  .plan.featured .btn-plan:hover{ background:#f1f1ef}
+
+  ul.features{ list-style:none; padding:0; margin:32px 0 0; display:flex; flex-direction:column; gap:12px}
+  ul.features li{ display:flex; gap:12px; align-items:flex-start; font-size:14px}
+  .tick{
+    flex:0 0 20px; height:20px; border-radius:999px;
+    background:#f1f1ef; color:var(--fg);
+    display:inline-flex; align-items:center; justify-content:center;
+    margin-top:2px;
+  }
+  .plan.featured .tick{ background:rgba(255,255,255,.18); color:#fff }
+  .tick svg{ width:11px; height:11px}
+
+  /* Price flip animation */
+  .price.flip{ animation:flip .35s ease }
+  @keyframes flip{
+    0%{opacity:0; transform:translateY(6px)}
+    100%{opacity:1; transform:translateY(0)}
+  }
+  @keyframes rise{
+    to{opacity:1; transform:translateY(0)}
+  }
+
