@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4')
+    center/cover no-repeat;
+}
+
+.hero h1 {
+  font-size: 4rem;
+}
+
+.hero p {
+  font-size: 1.3rem;
+}
+
+/* Menu Cards */
+.menu-card {
+  transition: 0.3s;
+  border: none;
+  overflow: hidden;
+}
+
+.menu-card img {
+  height: 250px;
+  object-fit: cover;
+}
+
+.menu-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Testimonials */
+.testimonial-card {
+  background: #fff;
+  transition: 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.03);
+}
+
+/* Contact */
+form .form-control {
+  padding: 12px;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  font-size: 15px;
+}
+
+/* Responsive */
+@media(max-width:768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
