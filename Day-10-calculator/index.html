@@ -1,0 +1,32 @@
+<div class="container mt-5">
+    <div class="calculator">
+        <div class="d-flex justify-content-between mb-3">
+            <h3>Calculator</h3>
+
+            <button id="themeBtn" class="btn btn-dark">
+                Dark Mode
+            </button>
+        </div>
+
+        <input type="text"
+               id="display"
+               class="form-control form-control-lg text-end"
+               readonly>
+
+        <div class="buttons mt-3">
+            <!-- Scientific -->
+            <button onclick="appendValue('Math.sin(')">sin</button>
+            <button onclick="appendValue('Math.cos(')">cos</button>
+            <button onclick="appendValue('Math.tan(')">tan</button>
+            <button onclick="appendValue('Math.log10(')">log</button>
+
+            <!-- Numbers -->
+            <button onclick="appendValue('7')">7</button>
+            <button onclick="appendValue('8')">8</button>
+            <button onclick="appendValue('9')">9</button>
+            <button onclick="appendValue('/')">/</button>
+
+            <!-- More buttons -->
+        </div>
+    </div>
+</div>

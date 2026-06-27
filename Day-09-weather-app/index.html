@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 9 - Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="weather-card">
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Enter city name..." value="Rivertown">
+            <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        <div id="error-msg" class="error-msg hidden">City not found. Please try again.</div>
+
+        <div class="weather-info" id="weather-info">
+            <div class="main-details">
+                <div class="text-info">
+                    <h2 id="city-name">Today · Rivertown</h2>
+                    <h1 id="current-temp">17°</h1>
+                    <p id="feels-like">Feels like 15°C</p>
+                    <p id="weather-desc" class="description">Light rain ending soon</p>
+                </div>
+                <div class="main-icon-container">
+                    <img id="main-icon" src="https://openweathermap.org/img/wn/03d@2x.png" alt="Weather Icon">
+                </div>
+            </div>
+
+            <hr class="separator">
+
+            <div class="footer-info">
+                <span id="uv-index"><i class="fa-solid fa-sun"></i> UV Index: Low</span>
+                <span id="update-time">Updated just now</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

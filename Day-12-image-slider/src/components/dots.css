@@ -1,0 +1,32 @@
+/* Container for dots */
+.dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+  gap: 8px;
+}
+
+/* Default dot */
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.dot:hover {
+  background-color: #717171;
+  transform: scale(1.2);
+}
+
+/* Active dot */
+.dot.active {
+  background-color: #333;
+  width: 12px;
+  height: 12px;
+  transform: scale(1.3);
+}
