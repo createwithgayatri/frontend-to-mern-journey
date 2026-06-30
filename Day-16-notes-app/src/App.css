@@ -1,0 +1,42 @@
+body {
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+}
+
+.app {
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+.form input {
+  padding: 10px;
+  width: 70%;
+}
+
+.form button {
+  padding: 10px;
+  margin-left: 5px;
+}
+
+.search {
+  padding: 10px;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.notes {
+  margin-top: 20px;
+}
+
+.note {
+  background: #1e293b;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.actions button {
+  margin: 5px;
+}
