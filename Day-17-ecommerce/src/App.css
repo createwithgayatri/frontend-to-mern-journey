@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Additional micro-helpers if browser doesn't interpret standard Tailwind blur rules safely */
+.backdrop-blur-xs {
+  backdrop-filter: blur(2px);
+}
